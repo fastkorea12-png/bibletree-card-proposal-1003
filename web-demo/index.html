@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#22c55e">
+  <title>11월 1일 웹 묵상 시연 - Bibletree</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{--content-reading:640px;--content-form:560px;--content-list:768px;--content-grid:780px;--page-rail-detail:816px;--page-rail-dashboard:904px;--page-rail-calendar:920px}
+    body{background-color:#f9fafb;-webkit-tap-highlight-color:transparent}
+    .mobile-container{max-width:480px;margin:0 auto;background:white;min-height:100vh;position:relative;box-shadow:0 0 15px rgba(0,0,0,.05);display:flex;flex-direction:column}
+    @media(max-width:480px){.mobile-container{max-width:100%;box-shadow:none}}
+    @media(min-width:768px){.mobile-container{max-width:760px;box-shadow:none}}
+    @media(min-width:1024px){.page-col{width:100%;max-width:var(--content-reading);margin-inline:auto}.mobile-container{max-width:none;width:100%;padding-left:0;box-shadow:none;background:#f9fafb;display:grid;grid-template-columns:84px 1fr;grid-template-rows:auto 1fr}.mobile-container>nav{grid-column:1;grid-row:1/3}.mobile-container>header,.mobile-container>main{grid-column:2}.mobile-container>header{grid-row:1}.mobile-container>main{grid-row:2;min-width:0}}
+    .demo-shell{max-width:430px;width:100%;margin:0 auto 5rem;background:#fff;min-height:100vh;color:#1c222b;word-break:keep-all;overflow-wrap:anywhere;line-height:1.75}
+    .verse-row{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #f3f4f6;font-size:16px;line-height:1.8}.verse-row:last-child{border-bottom:0}.verse-num{font-size:13px;font-weight:800;color:#16803c;text-align:right;padding-top:4px}
+    .toon-track{display:flex;width:100%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;touch-action:pan-x;}
+    .toon-track::-webkit-scrollbar{display:none}.toon-slide{flex:0 0 100%;min-width:100%;scroll-snap-align:start;scroll-snap-stop:always}
+    .toon-art-button{display:block;width:100%;padding:0;border:0;background:#f8fafc;cursor:zoom-in}.toon-art{display:block;width:100%;height:auto;object-fit:contain}
+    .toon-caption{min-height:76px;padding:14px 16px;border-top:1px solid #e5e7eb;background:#f0fdf4;color:#14532d;font-size:17px;font-weight:700;line-height:1.55}
+    .toon-controls{display:flex;align-items:center;justify-content:space-between;gap:4px;margin-top:12px}.toon-arrow{min-width:48px;min-height:48px;border:1px solid #d1d5db;border-radius:14px;background:#fff;color:#166534;font-size:20px;font-weight:800}.toon-dots{display:flex;align-items:center;justify-content:center;gap:0;flex:1;min-width:0}.toon-dot{flex:1;min-width:32px;min-height:44px;display:grid;place-items:center;background:transparent}.toon-dot::after{content:"";width:9px;height:9px;border-radius:50%;background:#d1d5db}.toon-dot[aria-current="true"]::after{width:22px;border-radius:99px;background:#16a34a}
+    dialog::backdrop{background:rgba(17,24,39,.86)}.comic-dialog{border:0;background:transparent;padding:0;max-width:96vw;max-height:92dvh;overflow:visible}.comic-dialog img{display:block;width:auto;height:auto;max-width:94vw;max-height:84dvh;object-fit:contain;margin:auto}.close-dialog{position:fixed;right:16px;top:16px;min-width:48px;min-height:48px;border-radius:999px;background:white;color:#1c222b;font-size:22px;font-weight:700}
+    .touch-target{min-height:48px;min-width:48px}.flow-link{scroll-margin-top:78px}.mobile-tabbar{padding-bottom:max(env(safe-area-inset-bottom),0px)}
+    @media(min-width:1024px){.mobile-tabbar{position:sticky!important;top:0!important;bottom:auto!important;left:auto!important;right:auto!important;width:84px!important;height:100vh!important;border-top:0!important;border-right:1px solid #f3f4f6!important}.mobile-tabbar>div{height:100%!important;flex-direction:column!important;justify-content:flex-start!important;max-width:none!important;gap:24px!important;padding-top:32px!important}}
+  </style>
+</head>
+<body>
+<div class="mobile-container font-sans text-gray-900">
+  <header class="page-col bg-white/95 backdrop-blur px-4 h-14 flex items-center justify-between sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+    <a href="../index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer" aria-label="Bibletree 홈"><div class="w-8 h-8 rounded-lg flex items-center justify-center text-white transition-colors bg-green-600"><i data-lucide="tree-deciduous" class="w-5 h-5"></i></div><span class="font-bold text-lg tracking-tight">Bibletree</span></a>
+    <span class="text-xs font-bold text-green-700 bg-green-50 rounded-full px-3 py-2">웹 묵상 시연</span>
+  </header>
+  <main class="flex-1 flex flex-col min-w-0 pb-24 lg:pb-8">
+    <div class="demo-shell px-4 sm:px-5">
+      <section class="py-6 text-center">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold text-green-700 bg-green-50">2026.11.01 · 시편 30:1–6</span>
+        <h1 id="page-title" class="text-2xl font-black leading-tight text-gray-900 mt-3">오늘의 말씀 묵상</h1>
+        <p id="content-title" class="text-lg font-bold text-gray-700 mt-2">아침의 기쁨</p>
+        <p class="text-base leading-relaxed text-gray-600 mt-2">QR을 열면 웹툰에서 시작해 본문과 활동, 기도로 이어집니다.</p>
+        <div class="grid grid-cols-2 gap-3 mt-5" role="group" aria-label="연령 선택">
+          <button class="touch-target age-button rounded-xl border-2 border-green-600 bg-green-600 text-white font-bold text-base" data-age="lower">저학년</button>
+          <button class="touch-target age-button rounded-xl border-2 border-gray-200 bg-white text-gray-700 font-bold text-base" data-age="upper">고학년</button>
+        </div>
+      </section>
+
+      <section id="comic" class="flow-link mb-8" aria-labelledby="comic-title">
+        <p class="text-xs font-extrabold tracking-widest text-green-700">01 · 오늘의 웹툰</p><h2 id="comic-title" class="text-xl font-black mt-1">웹툰 6컷</h2><p class="text-base text-gray-600 mt-2 mb-4">옆으로 밀어 한 컷씩 봐요. 그림을 누르면 크게 볼 수 있어요.</p>
+        <div id="toon-track" class="toon-track rounded-2xl border border-gray-200 bg-gray-50" tabindex="0" role="region" aria-label="좌우로 넘기는 웹툰 여섯 컷">
+          <figure class="toon-slide" data-cut="0"><button type="button" class="toon-art-button" aria-label="웹툰 1컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-1.png" alt="새싹이가 성경을 펼쳐 시편 30편을 읽어요."></button><figcaption class="toon-caption">새싹이는 시편 30편을 읽으며 다윗의 노래를 만나요.</figcaption></figure>
+          <figure class="toon-slide" data-cut="1"><button type="button" class="toon-art-button" aria-label="웹툰 2컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-2.png" alt="다윗이 위험 속에서 하나님께 간절히 기도해요."></button><figcaption class="toon-caption">다윗은 죽음의 위험에서 하나님께 살려 달라 부르짖었어요.</figcaption></figure>
+          <figure class="toon-slide" data-cut="2"><button type="button" class="toon-art-button" aria-label="웹툰 3컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-3.png" alt="하나님이 다윗을 어둠에서 빛으로 건져 주세요."></button><figcaption class="toon-caption">하나님이 다윗의 생명을 건지셨어요.</figcaption></figure>
+          <figure class="toon-slide" data-cut="3"><button type="button" class="toon-art-button" aria-label="웹툰 4컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-4.png" alt="다윗이 백성과 함께 하나님을 찬양해요."></button><figcaption class="toon-caption">다윗은 구원하신 하나님을 백성과 함께 찬양했어요.</figcaption></figure>
+          <figure class="toon-slide" data-cut="4"><button type="button" class="toon-art-button" aria-label="웹툰 5컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-5.png" alt="돌문이 열린 빈 무덤과 새벽빛, 예수님의 부활을 나타내요."></button><figcaption class="toon-caption">예수님은 십자가에서 죽으시고 다시 살아나셨어요.</figcaption></figure>
+          <figure class="toon-slide" data-cut="5"><button type="button" class="toon-art-button" aria-label="웹툰 6컷 크게 보기"><img class="toon-art" src="assets/webtoon-cut-6.png" alt="새싹이가 성경 곁에서 부활하신 예수님을 소망해요."></button><figcaption class="toon-caption">부활하신 예수님이 우리 소망이에요.</figcaption></figure>
+        </div>
+        <div class="toon-controls"><button id="toon-prev" class="toon-arrow" type="button" aria-label="이전 컷">‹</button><div class="toon-dots" role="group" aria-label="웹툰 컷 선택"><button class="toon-dot" type="button" data-toon="0" aria-label="1컷 보기" aria-current="true"></button><button class="toon-dot" type="button" data-toon="1" aria-label="2컷 보기" aria-current="false"></button><button class="toon-dot" type="button" data-toon="2" aria-label="3컷 보기" aria-current="false"></button><button class="toon-dot" type="button" data-toon="3" aria-label="4컷 보기" aria-current="false"></button><button class="toon-dot" type="button" data-toon="4" aria-label="5컷 보기" aria-current="false"></button><button class="toon-dot" type="button" data-toon="5" aria-label="6컷 보기" aria-current="false"></button></div><button id="toon-next" class="toon-arrow" type="button" aria-label="다음 컷">›</button></div>
+        <p id="toon-progress" class="text-sm text-gray-500 text-center mt-1" aria-live="polite">1 / 6</p>
+      </section>
+
+      <section id="scripture" class="flow-link mb-8 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm" aria-labelledby="scripture-title">
+        <p class="text-xs font-extrabold tracking-widest text-green-700">02 · 전체 본문</p><h2 id="scripture-title" class="text-xl font-black mt-1">시편 30:1–6</h2><p class="text-sm text-gray-500 mt-1">개역한글(KRV)</p><div id="full-verses" class="mt-3"></div>
+      </section>
+
+      <section id="words-activities" class="flow-link mb-8 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm" aria-labelledby="words-title">
+        <p class="text-xs font-extrabold tracking-widest text-green-700">03 · 단어와 활동</p><h2 id="words-title" class="text-xl font-black mt-1">말씀에 응답해요</h2><div id="word-list" class="mt-3"></div><div id="story-text" class="space-y-4 text-base leading-relaxed text-gray-700 mt-5"></div><div id="activities" class="space-y-4 mt-5"></div>
+      </section>
+
+      <section id="prayer" class="flow-link mb-8 rounded-2xl border border-green-100 bg-green-50 p-5" aria-labelledby="prayer-title">
+        <p class="text-xs font-extrabold tracking-widest text-green-700">04 · 기도</p><h2 id="prayer-title" class="text-xl font-black mt-1">하나님께 마음을 말해요</h2><p id="prayer-text" class="text-base leading-relaxed text-gray-700 mt-3"></p>
+      </section>
+      <p class="text-sm text-gray-500 text-center pb-8">하루치 웹 시연 초안 · 입력과 저장 기능은 연결하지 않았습니다.</p>
+    </div>
+  </main>
+  <nav class="mobile-tabbar fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50" aria-label="Main navigation">
+    <div class="max-w-lg mx-auto flex justify-around items-center h-14 lg:flex-col lg:justify-start lg:items-center lg:h-full lg:max-w-none lg:mx-0 lg:w-full lg:gap-6 lg:pt-8">
+      <a href="#comic" class="flex flex-col items-center justify-center gap-0.5 transition-colors min-w-[48px] min-h-[48px] lg:w-16 lg:py-2 lg:rounded-lg text-gray-500 hover:text-green-700"><i data-lucide="book-open" class="w-5 h-5"></i><span class="text-[10px] lg:text-[9px] lg:leading-tight lg:text-center">웹툰</span></a>
+      <a href="#scripture" class="flex flex-col items-center justify-center gap-0.5 transition-colors min-w-[48px] min-h-[48px] lg:w-16 lg:py-2 lg:rounded-lg text-gray-500 hover:text-green-700"><i data-lucide="calendar" class="w-5 h-5"></i><span class="text-[10px] lg:text-[9px] lg:leading-tight lg:text-center">본문</span></a>
+      <a href="#words-activities" class="flex flex-col items-center justify-center gap-0.5 transition-colors min-w-[48px] min-h-[48px] lg:w-16 lg:py-2 lg:rounded-lg text-gray-500 hover:text-green-700"><i data-lucide="users" class="w-5 h-5"></i><span class="text-[10px] lg:text-[9px] lg:leading-tight lg:text-center">활동</span></a>
+      <a href="#prayer" class="flex flex-col items-center justify-center gap-0.5 transition-colors min-w-[48px] min-h-[48px] lg:w-16 lg:py-2 lg:rounded-lg text-gray-500 hover:text-green-700"><i data-lucide="heart" class="w-5 h-5"></i><span class="text-[10px] lg:text-[9px] lg:leading-tight lg:text-center">기도</span></a>
+    </div>
+  </nav>
+</div>
+<dialog id="comic-dialog" class="comic-dialog" aria-label="웹툰 컷 크게 보기"><button id="comic-close" class="close-dialog" aria-label="닫기">×</button><p id="comic-dialog-label" class="text-center text-white font-bold mb-3"></p><img id="comic-dialog-image" src="assets/webtoon-cut-1.png" alt="확대된 웹툰 컷"></dialog>
+<script>
+const params=new URLSearchParams(location.search);let age=params.get('age')==='upper'?'upper':'lower';const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function setAge(next){age=next;history.replaceState(null,'',`?age=${age}`);document.querySelectorAll('.age-button').forEach(b=>{const active=b.dataset.age===age;b.className=`touch-target age-button rounded-xl border-2 ${active?'border-green-600 bg-green-600 text-white':'border-gray-200 bg-white text-gray-700'} font-bold text-base`});fetch(`assets/${age}.json`).then(r=>r.json()).then(d=>render(d,age==='lower'));}
+function render(d,low){$('content-title').textContent=d.title;const vocab=d.glossary||[];$('word-list').innerHTML=vocab.map(x=>`<div class="rounded-xl bg-gray-50 p-4 mb-2 text-base"><b class="text-green-800">${esc(x.word)}</b><p class="text-gray-700 mt-1">${esc(x.def)}</p></div>`).join('');$('story-text').innerHTML=(d.story||[]).map(t=>`<p>${esc(t)}</p>`).join('');$('activities').innerHTML=low?`<div class="rounded-xl border border-yellow-200 p-4"><p class="font-bold text-gray-900">① 다윗은 어려울 때 누구께 부르짖었나요?</p><div class="flex gap-3 mt-3"><button class="touch-target activity-choice rounded-xl border border-gray-200 px-5 text-base" aria-pressed="false">하나님</button><button class="touch-target activity-choice rounded-xl border border-gray-200 px-5 text-base" aria-pressed="false">자기 힘</button></div></div><div class="rounded-xl border border-yellow-200 p-4"><p class="font-bold text-gray-900">② 예수님의 부활 소망을 기억하며 해 보고 싶은 일을 골라요.</p>${['하나님께 솔직히 기도해요.','예수님이 죽음을 이기신 일을 기억해요.','힘든 친구의 이야기를 따뜻하게 들어줘요.'].map(x=>`<label class="flex items-center gap-3 min-h-[48px] text-base"><input type="checkbox" class="w-5 h-5 accent-green-600">${esc(x)}</label>`).join('')}</div><div class="rounded-xl border border-yellow-200 p-4 text-base">③ 감사 기도 한 줄: 예수님, 죽음을 이기시고 소망 주셔서 감사해요.</div>`:`<div class="rounded-xl border border-blue-100 p-4 text-base"><p class="font-bold text-gray-900">① 시편 30:5의 짝을 찾아 보세요.</p><p class="mt-2">노염은 잠깐 · 저녁 · 울음<br>기쁨 · 은총은 평생 · 아침</p></div><div class="rounded-xl border border-blue-100 p-4 text-base"><p class="font-bold text-gray-900">② 울음이 있는 밤에도 예수님의 부활은 무엇을 말해 주나요?</p>${['믿으면 모든 어려움이 바로 끝나요.','죽음을 이기신 예수님 안에 참된 소망이 있어요.'].map(x=>`<label class="flex items-start gap-3 min-h-[48px] py-2"><input type="radio" name="upper-choice" class="w-5 h-5 mt-1 accent-green-600">${esc(x)}</label>`).join('')}</div><div class="rounded-xl border border-blue-100 p-4 text-base"><p class="font-bold text-gray-900">③ 다윗처럼 하나님께 감사할 한 가지를 적어요.</p><div class="h-12 border-b border-gray-300"></div></div>`;$('prayer-text').textContent=d.prayer;$('full-verses').innerHTML=d.verses.map(v=>`<div class="verse-row"><span class="verse-num">${esc(v.n)}</span><span>${esc(v.t)}</span></div>`).join('');}
+document.querySelectorAll('.age-button').forEach(b=>b.addEventListener('click',()=>setAge(b.dataset.age)));
+const toonTrack=$('toon-track'),toonSlides=[...document.querySelectorAll('.toon-slide')],toonDots=[...document.querySelectorAll('.toon-dot')];let toonIndex=0;function goToToonCut(i){toonIndex=Math.max(0,Math.min(toonSlides.length-1,i));toonTrack.scrollTo({left:toonIndex*toonTrack.clientWidth,behavior:'smooth'});updateToonState()}function updateToonState(){const width=toonTrack.clientWidth;if(width)toonIndex=Math.max(0,Math.min(toonSlides.length-1,Math.round(toonTrack.scrollLeft/width)));toonDots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===toonIndex)));$('toon-progress').textContent=`${toonIndex+1} / ${toonSlides.length}`}$('toon-prev').addEventListener('click',()=>goToToonCut(toonIndex-1));$('toon-next').addEventListener('click',()=>goToToonCut(toonIndex+1));toonDots.forEach(dot=>dot.addEventListener('click',()=>goToToonCut(Number(dot.dataset.toon))));toonTrack.addEventListener('scroll',()=>requestAnimationFrame(updateToonState),{passive:true});toonTrack.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();goToToonCut(toonIndex+1)}if(e.key==='ArrowLeft'){e.preventDefault();goToToonCut(toonIndex-1)}});window.addEventListener('resize',updateToonState);
+document.querySelectorAll('.toon-art-button').forEach((button,i)=>button.addEventListener('click',()=>{$('comic-dialog-image').src=`assets/webtoon-cut-${i+1}.png`;$('comic-dialog-image').alt=`웹툰 ${i+1}컷 확대 보기`;$('comic-dialog-label').textContent=`${i+1} / 6 · 크게 보기`;$('comic-dialog').showModal()}));$('comic-close').addEventListener('click',()=>$('comic-dialog').close());$('comic-dialog').addEventListener('click',e=>{if(e.target===$('comic-dialog'))$('comic-dialog').close()});setAge(age);if(window.lucide)lucide.createIcons();
+</script>
+</body>
+</html>

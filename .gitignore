@@ -1,0 +1,3 @@
+# Local-only QR images that contain the Mac's LAN address; public QRs are qr-web-*.png.
+assets/phone-qr-lower.png
+assets/phone-qr-upper.png
