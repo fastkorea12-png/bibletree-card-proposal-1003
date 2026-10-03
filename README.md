@@ -4,7 +4,7 @@
 
 ## 미리보기
 
-- 배포 예정: https://fastkorea12-png.github.io/bibletree-card-proposal-1003/
+- 공개 제안 페이지: https://fastkorea12-png.github.io/bibletree-card-proposal-1003/
 - 저학년 웹: https://fastkorea12-png.github.io/bibletree-card-proposal-1003/web-demo/?age=lower
 - 고학년 웹: https://fastkorea12-png.github.io/bibletree-card-proposal-1003/web-demo/?age=upper
 - 로컬: `python3 -m http.server 8940 --bind 0.0.0.0` 뒤 `http://127.0.0.1:8940/`
